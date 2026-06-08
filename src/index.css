@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a2e;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(46, 45, 112, 0.15);
+    color: #2E2D70;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f5f6fc;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c2c1eb;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2E2D70;
+  }
+}
+
+@layer components {
+  /* ─── Glass cards (light theme) ─── */
+  .glass-light {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(46, 45, 112, 0.06);
+  }
+
+  /* ─── Gradient text ─── */
+  .gradient-text-brand {
+    background: linear-gradient(135deg, #2E2D70 0%, #4a49a0 50%, #6e6dba 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-gold {
+    background: linear-gradient(135deg, #a88a35 0%, #C9A84C 50%, #e0c97a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ─── Section backgrounds ─── */
+  .bg-brand-gradient {
+    background: linear-gradient(135deg, #2E2D70 0%, #1c1b47 100%);
+  }
+
+  .bg-subtle {
+    background: linear-gradient(180deg, #fafbff 0%, #f0f0fa 100%);
+  }
+
+  .bg-hero-pattern {
+    background:
+      radial-gradient(ellipse at 30% 0%, rgba(46, 45, 112, 0.06) 0%, transparent 60%),
+      radial-gradient(ellipse at 70% 100%, rgba(46, 45, 112, 0.04) 0%, transparent 60%),
+      #ffffff;
+  }
+
+  /* ─── Section dividers ─── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(46, 45, 112, 0.1), transparent);
+  }
+
+  /* ─── Buttons ─── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-sm tracking-wide transition-all duration-300;
+    background: #2E2D70;
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background: #25245a;
+    box-shadow: 0 8px 30px rgba(46, 45, 112, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-sm tracking-wide transition-all duration-300;
+    background: transparent;
+    color: #2E2D70;
+    border: 2px solid #2E2D70;
+  }
+  .btn-secondary:hover {
+    background: #2E2D70;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .btn-white {
+    @apply inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-sm tracking-wide transition-all duration-300;
+    background: #fff;
+    color: #2E2D70;
+  }
+  .btn-white:hover {
+    background: #f0f0fa;
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-sm tracking-wide transition-all duration-300;
+    background: linear-gradient(135deg, #C9A84C, #e0c97a);
+    color: #1a1a2e;
+  }
+  .btn-gold:hover {
+    box-shadow: 0 8px 30px rgba(201, 168, 76, 0.35);
+    transform: translateY(-2px);
+  }
+
+  /* ─── Premium card ─── */
+  .card {
+    @apply bg-white rounded-2xl transition-all duration-500;
+    border: 1px solid rgba(228, 230, 242, 0.7);
+    box-shadow: 0 1px 3px rgba(46, 45, 112, 0.03), 0 4px 12px rgba(46, 45, 112, 0.04);
+  }
+  .card:hover {
+    box-shadow: 0 4px 16px rgba(46, 45, 112, 0.08), 0 12px 40px rgba(46, 45, 112, 0.06);
+    border-color: rgba(46, 45, 112, 0.12);
+    transform: translateY(-4px);
+  }
+
+  /* ─── Brand card (dark bg) ─── */
+  .card-brand {
+    @apply rounded-2xl transition-all duration-500;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .card-brand:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+  }
+
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+}
