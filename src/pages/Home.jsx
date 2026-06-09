@@ -140,8 +140,7 @@ const Home = () => {
       tl.fromTo('.hero-badge', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' })
         .fromTo('.hero-title', { opacity: 0, y: 35 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.2')
         .fromTo('.hero-subtitle', { opacity: 0, y: 25 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.3')
-        .fromTo('.hero-buttons', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, '-=0.2')
-        .fromTo('.hero-scroll', { opacity: 0 }, { opacity: 1, duration: 0.4 }, '-=0.1');
+        .fromTo('.hero-buttons', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, '-=0.2');
     }, heroRef);
     return () => ctx.revert();
   }, []);
@@ -199,13 +198,7 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Scroll indicator */}
-          <div className="hero-scroll absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2" style={{opacity:0}}>
-            <span className="text-[11px] text-text-light uppercase tracking-[0.2em]">Scroll</span>
-            <div className="w-5 h-8 rounded-full border-2 border-brand/20 flex justify-center pt-1.5">
-              <div className="w-1 h-2 rounded-full bg-brand/40 animate-bounce" />
-            </div>
-          </div>
+
         </div>
       </section>
 
@@ -427,8 +420,12 @@ const Home = () => {
               inspire growth, and move Africa forward."
             </blockquote>
             <div className="mt-10 flex flex-col items-center gap-2">
-              <div className="w-14 h-14 rounded-full bg-brand flex items-center justify-center text-white font-bold text-sm">
-                AB
+              <div className="w-14 h-14 rounded-full overflow-hidden border border-brand/10">
+                <img
+                  src="/images/ani-bassey.jfif"
+                  alt="Ani Charles Bassey-Eyo"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <p className="font-semibold text-text-primary text-sm">Ani Charles Bassey-Eyo</p>
               <p className="text-xs text-gold-dark font-semibold tracking-wider uppercase">
