@@ -62,7 +62,7 @@ const leadershipTeam = [
   },
   {
     name: 'Olaniyi Omole',
-    title: 'Head, Training Services',
+    title: 'Deputy Consulting Lead',
     initials: 'OO',
     image: '/images/niyi.webp',
     objectPosition: 'object-top',
