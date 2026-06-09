@@ -17,6 +17,7 @@ const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About Us', path: '/about' },
   { name: 'Expression & Companies', path: null, hasDropdown: true },
+  { name: 'Footprint', path: '/footprint' },
   { name: 'News & Media', path: '/news' },
   { name: 'Career', path: '/career' },
   { name: 'Contact Us', path: '/contact' },

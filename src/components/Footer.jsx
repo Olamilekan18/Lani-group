@@ -25,6 +25,7 @@ const quickLinks = [
   { name: 'Company Overview', path: '/about' },
   { name: 'Mission & Vision', path: '/about#mission' },
   { name: 'Leadership Team', path: '/about#leadership' },
+  { name: 'Geographic Footprint', path: '/footprint' },
   { name: 'Values & Culture', path: '/about#values' },
   { name: 'Sustainability', path: '/about#sustainability' },
   { name: 'CSR', path: '/about#csr' },

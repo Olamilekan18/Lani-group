@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import NewsMedia from './pages/NewsMedia';
 import ArticleDetail from './pages/ArticleDetail';
 import Career from './pages/Career';
+import Footprint from './pages/Footprint';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="news" element={<NewsMedia />} />
           <Route path="news/:id" element={<ArticleDetail />} />
           <Route path="career" element={<Career />} />
+          <Route path="footprint" element={<Footprint />} />
         </Route>
       </Routes>
     </Router>
