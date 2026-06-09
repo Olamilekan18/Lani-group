@@ -91,7 +91,7 @@ const ArticleDetail = () => {
             <div className="flex items-center gap-2">
               {[
                 { icon: TwitterIcon, url: '#' },
-                { icon: LinkedinIcon, url: '#' },
+                { icon: LinkedinIcon, url: '#https://www.linkedin.com/company/lani-group/posts/?feedView=all' },
                 { icon: FacebookIcon, url: '#' },
               ].map((item, idx) => (
                 <a

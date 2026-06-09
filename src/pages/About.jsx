@@ -30,17 +30,17 @@ const csrPillars = [
 const focusAreas = [
   {
     title: 'Environmental Stewardship',
-    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80',
+    image: '/images/bees.webp',
     description: 'Integrating eco-conscious practices across all operations and subsidiaries.'
   },
   {
     title: 'Economic Empowerment',
-    image: 'https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=800&q=80',
+    image: '/images/economic empowerement.webp',
     description: 'Creating sustainable livelihoods and building economic resilience in communities.'
   },
   {
     title: 'Sustainable Partnerships',
-    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80',
+    image: '/images/partnership.webp',
     description: 'Collaborating with public and private stakeholders for long-term impact.'
   },
 ];
@@ -50,19 +50,22 @@ const leadershipTeam = [
     name: 'Ani Bassey-Eyo',
     title: 'Chief Executive Officer',
     initials: 'AB',
+    image: '/images/ani-bassey.jfif',
     bio: 'Ani Charles Bassey-Eyo is the Chief Executive Officer (CEO) of LANI Group, where he provides strategic leadership across all subsidiaries, spanning consulting, merchandising, food processing, technology, travel, and philanthropy. With over 20 years of experience in finance, management consulting, and corporate strategy, Ani brings deep expertise in business transformation, sustainability advisory, and market systems development.\n\nPrior to founding LANI Group, he worked in finance, treasury, and advisory roles across leading multinational and regional institutions. He holds a BSc in Accounting and Finance from the University of Hull, and pursued postgraduate studies in International Tax Law at Queen Mary and Westfield College, University of London. Ani is a Chartered Accountant and Corporate Treasurer, and a fellow or associate of ACCA, ICAN, CITN, and ACT (UK).\n\nHe is passionate about building resilient African enterprises, advancing sustainable development, and promoting youth empowerment across the continent.',
   },
   {
     name: 'Osato Viola Oguntosin',
     title: 'Head, Corporate Services',
     initials: 'OV',
-    image: '/images/osato.png',
+    image: '/images/osato.webp',
     bio: 'Osato Viola Oguntosin is the Head of Corporate Services at Lani Consulting Limited, a member of the LANI Group, where she oversees business operations, human resources, and administrative functions. With over 10 years of experience spanning operations management, HR management, procurement, and strategic planning, Osato brings proven expertise in process optimization, compliance, and workforce development.\n\nPrior to joining LANI Group, she held leadership roles at Southgate Technologies Limited, where she led corporate operations, supply chain management, and human resource initiatives. Osato holds a Bachelor of Laws (LLB) from the University of Benin and a Barrister-at-Law (BL) from the Nigerian Law School and is an Associate Member of the Chartered Institute of Personnel Management (ACIPM).\n\nShe is passionate about building efficient systems, empowering people, and driving organizational excellence.',
   },
   {
     name: 'Olaniyi Omole',
     title: 'Head, Training Services',
     initials: 'OO',
+    image: '/images/niyi.webp',
+    objectPosition: 'object-top',
     bio: 'Olaniyi Omole is the Head of Training Services at Lani Consulting Limited, where he leads and coordinates training design, delivery, and quality assurance across the Group. In this role, he oversees the development of entrepreneurship, employability, and capacity-building programmes; integrates technology to enhance training efficiency and data intelligence; and ensures governance, consistency, and impact across all training expressions within the organisation.\n\nWith over 15 years of professional experience, Olaniyi brings strong expertise in curriculum and instructional design, training operations management, stakeholder coordination, and programme scaling. He has a proven track record in developing and managing end-to-end training pipelines—from concept development and facilitation to assessment, reporting, and continuous improvement—while aligning programmes with organisational strategy and client objectives.\n\nHe holds a B.Sc. (Hons) in Political Science and a Diploma in Public Administration, supported by advanced certifications in MSME training of trainers, vocational and skills development, digital learning, and professional communication. Olaniyi is passionate about building robust, scalable, and impact-driven training systems that strengthen human capital, support enterprise growth, and deliver measurable outcomes across the Lani Consulting Group.',
   },
 ];
@@ -353,7 +356,7 @@ const About = () => {
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${member.objectPosition || 'object-center'}`}
                       />
                     ) : (
                       <div className="w-20 h-20 rounded-full bg-brand flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-500">

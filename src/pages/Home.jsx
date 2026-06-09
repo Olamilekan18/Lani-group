@@ -127,6 +127,7 @@ const partnerLogos = [
   { src: '/images/logos/stanbic.png', alt: 'Stanbic IBTC' },
   { src: '/images/logos/agri_brand.png', alt: 'Agriculture Brand' },
   { src: '/images/logos/thrive_agric.png', alt: 'Thrive Agric' },
+  { src: '/images/sos-children.webp', alt: 'SOS Children\'s Villages' },
 ];
 
 /* ───── Component ───── */
@@ -267,14 +268,11 @@ const Home = () => {
             <SectionReveal animation="fade-left" delay={0.15}>
               <div className="relative">
                 <div className="rounded-3xl overflow-hidden bg-brand-50 aspect-[4/3] flex items-center justify-center border border-brand-100">
-                  {/* 📸 Replace: Add team/office hero photo here */}
-                  <div className="text-center px-8">
-                    <div className="w-20 h-20 rounded-2xl bg-brand/10 flex items-center justify-center mx-auto mb-4">
-                      <Globe size={32} className="text-brand" />
-                    </div>
-                    <p className="text-sm text-text-muted">Team photo placeholder</p>
-                    <p className="text-xs text-text-light mt-1">Add your image to public/assets/images/</p>
-                  </div>
+                  <img
+                    src="/images/lani_team_group_clear.jpg"
+                    alt="Lani Group team"
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
                 </div>
                 {/* Decorative accent */}
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl bg-brand/5 -z-10" />
