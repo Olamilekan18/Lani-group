@@ -39,8 +39,7 @@ const Career = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const subject = encodeURIComponent(`LANI Group Application: ${formData.positionOfInterest}`);
-    const body = encodeURIComponent(
-      `Full Name: ${formData.fullName}\n` +
+    const bodyText = `Full Name: ${formData.fullName}\n` +
       `Email Address: ${formData.email}\n` +
       `Phone Number: ${formData.phone}\n` +
       `Preferred Program: ${formData.preferredProgram}\n` +
@@ -49,10 +48,29 @@ const Career = () => {
       `Educational Qualification: ${formData.qualification || 'N/A'}\n` +
       `Availability/Preferred Start Date: ${formData.startDate || 'N/A'}\n` +
       `How did you hear about us?: ${formData.source || 'N/A'}\n\n` +
-      `Message:\n${formData.message || 'No message provided'}`
-    );
-    window.location.href = `mailto:careers@lanigroup.com?subject=${subject}&body=${body}`;
-    alert('Thank you for your interest! Your email client has been opened to submit your details to careers@lanigroup.com.');
+      `Message:\n${formData.message || 'No message provided'}`;
+
+    const mailtoBody = encodeURIComponent(bodyText);
+    window.location.href = `mailto:careers@lanigroup.com?subject=${subject}&body=${mailtoBody}`;
+
+    const whatsappMessage = `*LANI Group Application*\n\n` +
+      `*Full Name:* ${formData.fullName}\n` +
+      `*Email:* ${formData.email}\n` +
+      `*Phone:* ${formData.phone}\n` +
+      `*Preferred Program:* ${formData.preferredProgram}\n` +
+      `*Position of Interest:* ${formData.positionOfInterest}\n` +
+      `*Location:* ${formData.location || 'N/A'}\n` +
+      `*Qualification:* ${formData.qualification || 'N/A'}\n` +
+      `*Start Date:* ${formData.startDate || 'N/A'}\n` +
+      `*Referral Source:* ${formData.source || 'N/A'}\n\n` +
+      `*Message:* ${formData.message || 'No message provided'}`;
+
+    const encodedWhatsapp = encodeURIComponent(whatsappMessage);
+    const whatsappNumbers = ['2349033153480', '2347033356581'];
+    const randomPhone = whatsappNumbers[Math.floor(Math.random() * whatsappNumbers.length)];
+    window.open(`https://wa.me/${randomPhone}?text=${encodedWhatsapp}`, '_blank');
+
+    alert('Thank you for your interest! Your email client and WhatsApp have been opened to submit your details.');
     
     // Reset form
     setFormData({

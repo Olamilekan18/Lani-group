@@ -11,13 +11,26 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const subject = encodeURIComponent(`LANI Group Contact Inquiry: ${formData.subject}`);
-    const body = encodeURIComponent(
-      `Full Name: ${formData.name}\n` +
+    const bodyText = `Full Name: ${formData.name}\n` +
       `Email Address: ${formData.email}\n` +
       `Company/Organization: ${formData.company || 'N/A'}\n\n` +
-      `Message:\n${formData.message}`
-    );
-    window.location.href = `mailto:careers@lanigroup.com?subject=${subject}&body=${body}`;
+      `Message:\n${formData.message}`;
+
+    const mailtoBody = encodeURIComponent(bodyText);
+    window.location.href = `mailto:careers@lanigroup.com?subject=${subject}&body=${mailtoBody}`;
+
+    const whatsappMessage = `*LANI Group Contact Inquiry*\n\n` +
+      `*Full Name:* ${formData.name}\n` +
+      `*Email:* ${formData.email}\n` +
+      `*Company/Organization:* ${formData.company || 'N/A'}\n` +
+      `*Subject:* ${formData.subject}\n\n` +
+      `*Message:* ${formData.message}`;
+
+    const encodedWhatsapp = encodeURIComponent(whatsappMessage);
+    const whatsappNumbers = ['2349033153480', '2347033356581'];
+    const randomPhone = whatsappNumbers[Math.floor(Math.random() * whatsappNumbers.length)];
+    window.open(`https://wa.me/${randomPhone}?text=${encodedWhatsapp}`, '_blank');
+
     setSubmitted(true);
     setFormData({ name: '', email: '', company: '', subject: '', message: '' });
     setTimeout(() => setSubmitted(false), 4000);
