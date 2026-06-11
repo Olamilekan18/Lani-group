@@ -10,7 +10,16 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const subject = encodeURIComponent(`LANI Group Contact Inquiry: ${formData.subject}`);
+    const body = encodeURIComponent(
+      `Full Name: ${formData.name}\n` +
+      `Email Address: ${formData.email}\n` +
+      `Company/Organization: ${formData.company || 'N/A'}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    window.location.href = `mailto:careers@lanigroup.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
+    setFormData({ name: '', email: '', company: '', subject: '', message: '' });
     setTimeout(() => setSubmitted(false), 4000);
   };
 

@@ -38,7 +38,22 @@ const Career = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Thank you for your application! We will review your profile and get back to you within 48 hours.');
+    const subject = encodeURIComponent(`LANI Group Application: ${formData.positionOfInterest}`);
+    const body = encodeURIComponent(
+      `Full Name: ${formData.fullName}\n` +
+      `Email Address: ${formData.email}\n` +
+      `Phone Number: ${formData.phone}\n` +
+      `Preferred Program: ${formData.preferredProgram}\n` +
+      `Position/Program of Interest: ${formData.positionOfInterest}\n` +
+      `Location: ${formData.location || 'N/A'}\n` +
+      `Educational Qualification: ${formData.qualification || 'N/A'}\n` +
+      `Availability/Preferred Start Date: ${formData.startDate || 'N/A'}\n` +
+      `How did you hear about us?: ${formData.source || 'N/A'}\n\n` +
+      `Message:\n${formData.message || 'No message provided'}`
+    );
+    window.location.href = `mailto:careers@lanigroup.com?subject=${subject}&body=${body}`;
+    alert('Thank you for your interest! Your email client has been opened to submit your details to careers@lanigroup.com.');
+    
     // Reset form
     setFormData({
       fullName: '',

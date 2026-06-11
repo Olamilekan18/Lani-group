@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Calendar, ArrowRight, Tag } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { articles } from '../data/articles';
@@ -6,6 +7,12 @@ import SectionReveal from '../components/SectionReveal';
 const categories = ['All', 'About LANI Group', 'Community', 'International Relations', 'Trade & Commerce'];
 
 const NewsMedia = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  const filteredArticles = selectedCategory === 'All'
+    ? articles
+    : articles.filter(article => article.category === selectedCategory);
+
   return (
     <>
       <section className="relative py-32 md:py-40 overflow-hidden bg-brand-gradient">
@@ -23,54 +30,68 @@ const NewsMedia = () => {
         <div className="max-w-7xl mx-auto px-6">
           <SectionReveal>
             <div className="flex flex-wrap items-center gap-3 mb-14 justify-center">
-              {categories.map((cat, i) => (
-                <button key={cat} className={`px-5 py-2 rounded-full text-xs font-semibold transition-all duration-300 ${
-                  i === 0 ? 'bg-brand text-white' : 'bg-surface-100 text-text-muted hover:bg-brand-50 hover:text-brand border border-surface-300'
-                }`}>
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`px-5 py-2 rounded-full text-xs font-semibold transition-all duration-300 border ${
+                    selectedCategory === cat
+                      ? 'bg-brand text-white border-brand'
+                      : 'bg-surface-100 text-text-muted hover:bg-brand-50 hover:text-brand border-surface-300'
+                  }`}
+                >
                   {cat}
                 </button>
               ))}
             </div>
           </SectionReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {articles.map((article, index) => (
-              <SectionReveal key={article.id} animation="fade-up" delay={index * 0.1}>
-                <Link to={`/news/${article.id}`} className="card overflow-hidden h-full flex flex-col group block">
-                  <div className="h-48 bg-gradient-to-br from-brand-50 to-brand-100 relative overflow-hidden">
-                    {article.coverImage ? (
-                      <img
-                        src={article.coverImage}
-                        alt={article.title}
-                        className={`w-full h-full object-cover ${article.coverImagePosition || 'object-center'} transition-transform duration-500 group-hover:scale-105`}
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center">
-                        <span className="text-3xl font-display font-bold text-brand/10">LG</span>
+          {filteredArticles.length > 0 ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredArticles.map((article, index) => (
+                <SectionReveal key={article.id} animation="fade-up" delay={index * 0.1}>
+                  <Link to={`/news/${article.id}`} className="card overflow-hidden h-full flex flex-col group block">
+                    <div className="h-48 bg-gradient-to-br from-brand-50 to-brand-100 relative overflow-hidden">
+                      {article.coverImage ? (
+                        <img
+                          src={article.coverImage}
+                          alt={article.title}
+                          className={`w-full h-full object-cover ${article.coverImagePosition || 'object-center'} transition-transform duration-500 group-hover:scale-105`}
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center">
+                          <span className="text-3xl font-display font-bold text-brand/10">LG</span>
+                        </div>
+                      )}
+                      <div className="absolute bottom-3 left-3">
+                        <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/80 backdrop-blur-sm text-[14px] font-semibold text-brand">
+                          <Tag size={10} /> {article.category}
+                        </span>
                       </div>
-                    )}
-                    <div className="absolute bottom-3 left-3">
-                      <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/80 backdrop-blur-sm text-[14px] font-semibold text-brand">
-                        <Tag size={10} /> {article.category}
-                      </span>
                     </div>
-                  </div>
-                  <div className="p-6 flex-1 flex flex-col">
-                    <div className="flex items-center gap-2 text-xs text-text-light mb-3">
-                      <Calendar size={12} /> {article.date}
+                    <div className="p-6 flex-1 flex flex-col">
+                      <div className="flex items-center gap-2 text-xs text-text-light mb-3">
+                        <Calendar size={12} /> {article.date}
+                      </div>
+                      <h3 className="font-display text-lg font-bold text-text-primary mb-3 group-hover:text-brand transition-colors leading-snug">
+                        {article.title}
+                      </h3>
+                      <p className="text-sm text-text-muted leading-relaxed flex-1 line-clamp-3">{article.excerpt}</p>
+                      <div className="mt-5 flex items-center gap-1 text-sm text-brand font-semibold group-hover:gap-2 transition-all">
+                        Read More <ArrowRight size={14} />
+                      </div>
                     </div>
-                    <h3 className="font-display text-lg font-bold text-text-primary mb-3 group-hover:text-brand transition-colors leading-snug">
-                      {article.title}
-                    </h3>
-                    <p className="text-sm text-text-muted leading-relaxed flex-1 line-clamp-3">{article.excerpt}</p>
-                    <div className="mt-5 flex items-center gap-1 text-sm text-brand font-semibold group-hover:gap-2 transition-all">
-                      Read More <ArrowRight size={14} />
-                    </div>
-                  </div>
-                </Link>
-              </SectionReveal>
-            ))}
-          </div>
+                  </Link>
+                </SectionReveal>
+              ))}
+            </div>
+          ) : (
+            <SectionReveal>
+              <div className="text-center py-12">
+                <p className="text-text-muted text-base">No articles found in this category.</p>
+              </div>
+            </SectionReveal>
+          )}
         </div>
       </section>
     </>
