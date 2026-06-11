@@ -66,11 +66,10 @@ const Career = () => {
       `*Message:* ${formData.message || 'No message provided'}`;
 
     const encodedWhatsapp = encodeURIComponent(whatsappMessage);
-    const whatsappNumbers = ['2349033153480', '2347033356581'];
-    const randomPhone = whatsappNumbers[Math.floor(Math.random() * whatsappNumbers.length)];
-    window.open(`https://wa.me/${randomPhone}?text=${encodedWhatsapp}`, '_blank');
+    window.open(`https://wa.me/2349033153480?text=${encodedWhatsapp}`, '_blank');
+    window.open(`https://wa.me/2347033356581?text=${encodedWhatsapp}`, '_blank');
 
-    alert('Thank you for your interest! Your email client and WhatsApp have been opened to submit your details.');
+    alert('Thank you for your interest! Your email client and WhatsApp chats to both representatives have been opened. (If your browser blocks the tabs, please allow pop-ups for this site).');
     
     // Reset form
     setFormData({

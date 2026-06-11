@@ -27,9 +27,8 @@ const Contact = () => {
       `*Message:* ${formData.message}`;
 
     const encodedWhatsapp = encodeURIComponent(whatsappMessage);
-    const whatsappNumbers = ['2349033153480', '2347033356581'];
-    const randomPhone = whatsappNumbers[Math.floor(Math.random() * whatsappNumbers.length)];
-    window.open(`https://wa.me/${randomPhone}?text=${encodedWhatsapp}`, '_blank');
+    window.open(`https://wa.me/2349033153480?text=${encodedWhatsapp}`, '_blank');
+    window.open(`https://wa.me/2347033356581?text=${encodedWhatsapp}`, '_blank');
 
     setSubmitted(true);
     setFormData({ name: '', email: '', company: '', subject: '', message: '' });
