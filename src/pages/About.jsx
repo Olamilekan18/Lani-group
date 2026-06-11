@@ -183,7 +183,7 @@ const About = () => {
                   Mission
                 </h3>
                 <p className="text-text-secondary text-base leading-relaxed">
-                  To empower transformation through innovative solutions, strategic partnerships, and socially responsible initiatives that drive growth across Africa and beyond.
+                  To Deliver Sustainable Commercial And Societal Value for All Stakeholders by Establishing the Lani Entities as a top 5 sector Leaders In their Respective Portfolio by 2030
                 </p>
               </div>
             </SectionReveal>
@@ -197,7 +197,7 @@ const About = () => {
                   Vision
                 </h3>
                 <p className="text-text-secondary text-base leading-relaxed">
-                  To be a leading African enterprise known for excellence, impact, and integrity, shaping industries, uplifting communities, and championing Africa's place in the global economy.
+                  Create and Build Leading African and Global Brands that would drive Sustainable Philanthropy
                 </p>
               </div>
             </SectionReveal>
