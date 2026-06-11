@@ -171,7 +171,7 @@ const Home = () => {
             <div className="hero-badge inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 border border-brand-100 mb-8" style={{opacity:0}}>
               <span className="w-2 h-2 rounded-full bg-brand animate-pulse" />
               <span className="text-xs font-semibold text-brand tracking-wider uppercase">
-                Africa's Forward-Thinking Conglomerate
+                Africa's Forward-Thinking Enterprise
               </span>
             </div>
 
@@ -416,7 +416,7 @@ const Home = () => {
           <SectionReveal animation="scale">
             <Quote size={40} className="mx-auto text-brand/15 mb-8" />
             <blockquote className="font-display text-2xl md:text-3xl lg:text-[40px] font-medium text-text-primary leading-relaxed italic">
-              "At LANI Group, we don't just build businesses — we build solutions that shape lives,
+              "At LANI Group, we don't just build businesses; we build solutions that shape lives,
               inspire growth, and move Africa forward."
             </blockquote>
             <div className="mt-10 flex flex-col items-center gap-2">

@@ -66,7 +66,7 @@ const leadershipTeam = [
     initials: 'OO',
     image: '/images/niyi.webp',
     objectPosition: 'object-top',
-    bio: 'Olaniyi Omole is the Head of Training Services at Lani Consulting Limited, where he leads and coordinates training design, delivery, and quality assurance across the Group. In this role, he oversees the development of entrepreneurship, employability, and capacity-building programmes; integrates technology to enhance training efficiency and data intelligence; and ensures governance, consistency, and impact across all training expressions within the organisation.\n\nWith over 15 years of professional experience, Olaniyi brings strong expertise in curriculum and instructional design, training operations management, stakeholder coordination, and programme scaling. He has a proven track record in developing and managing end-to-end training pipelines—from concept development and facilitation to assessment, reporting, and continuous improvement—while aligning programmes with organisational strategy and client objectives.\n\nHe holds a B.Sc. (Hons) in Political Science and a Diploma in Public Administration, supported by advanced certifications in MSME training of trainers, vocational and skills development, digital learning, and professional communication. Olaniyi is passionate about building robust, scalable, and impact-driven training systems that strengthen human capital, support enterprise growth, and deliver measurable outcomes across the Lani Consulting Group.',
+    bio: 'Olaniyi Omole is the Head of Training Services at Lani Consulting Limited, where he leads and coordinates training design, delivery, and quality assurance across the Group. In this role, he oversees the development of entrepreneurship, employability, and capacity-building programmes; integrates technology to enhance training efficiency and data intelligence; and ensures governance, consistency, and impact across all training expressions within the organisation.\n\nWith over 15 years of professional experience, Olaniyi brings strong expertise in curriculum and instructional design, training operations management, stakeholder coordination, and programme scaling. He has a proven track record in developing and managing end-to-end training pipelines, from concept development and facilitation to assessment, reporting, and continuous improvement, while aligning programmes with organisational strategy and client objectives.\n\nHe holds a B.Sc. (Hons) in Political Science and a Diploma in Public Administration, supported by advanced certifications in MSME training of trainers, vocational and skills development, digital learning, and professional communication. Olaniyi is passionate about building robust, scalable, and impact-driven training systems that strengthen human capital, support enterprise growth, and deliver measurable outcomes across the Lani Consulting Group.',
   },
   {
     name: 'Luqman Musah Ozekhome',
@@ -122,9 +122,9 @@ const About = () => {
         ref={heroRef}
         className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-28 lg:pt-36 pb-20"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80')`,
+          backgroundImage: `url('/images/about_lani_group.jpg')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'top center',
         }}
       >
         {/* Violet-blue semi-transparent overlay */}
@@ -137,7 +137,7 @@ const About = () => {
             </h1>
             <div className="w-16 h-[3px] bg-gold mx-auto mt-6" />
             <p className="mt-8 text-base md:text-lg text-white/90 leading-relaxed font-normal">
-              LANI Group is a forward-thinking African conglomerate driving impact across key sectors including management consulting, travel and tourism, merchandising, social development, training, technology and humanitarian. With a diverse portfolio of companies under its umbrella, LANI Group is united by a shared purpose: delivering innovative, sustainable, and locally relevant solutions that inspire transformation and growth.
+              LANI Group is a forward-thinking African enterprise driving impact across key sectors including management consulting, travel and tourism, merchandising, social development, training, technology and humanitarian. With a diverse portfolio of companies under its umbrella, LANI Group is united by a shared purpose: delivering innovative, sustainable, and locally relevant solutions that inspire transformation and growth.
             </p>
             <p className="mt-6 text-base md:text-lg text-white/90 leading-relaxed font-normal">
               We collaborate with public and private stakeholders to advance enterprise, uplift communities, and promote African excellence on the global stage. At the heart of our work lies a commitment to quality, integrity, and inclusive development.
@@ -197,7 +197,7 @@ const About = () => {
                   Vision
                 </h3>
                 <p className="text-text-secondary text-base leading-relaxed">
-                  To be a leading African conglomerate known for excellence, impact, and integrity—shaping industries, uplifting communities, and championing Africa's place in the global economy.
+                  To be a leading African enterprise known for excellence, impact, and integrity, shaping industries, uplifting communities, and championing Africa's place in the global economy.
                 </p>
               </div>
             </SectionReveal>
@@ -220,7 +220,7 @@ const About = () => {
                 </h2>
                 <div className="w-12 h-[3px] bg-gold mt-6" />
                 <p className="mt-8 text-text-secondary text-base md:text-lg leading-relaxed">
-                  LANI Group thrives on a culture of excellence, integrity, and impact. We are driven by a deep commitment to innovation, collaboration, and service across all our subsidiaries. Our core values—Leadership, Accountability, Nurturing, and Innovation—guide every decision and interaction. We foster a people-first environment where creativity meets discipline, and where every team member is empowered to contribute to meaningful change. At LANI, we don't just build businesses—we build communities, legacy, and a future Africa can be proud of.
+                  LANI Group thrives on a culture of excellence, integrity, and impact. We are driven by a deep commitment to innovation, collaboration, and service across all our subsidiaries. Our core values (Leadership, Accountability, Nurturing, and Innovation) guide every decision and interaction. We foster a people-first environment where creativity meets discipline, and where every team member is empowered to contribute to meaningful change. At LANI, we don't just build businesses; we build communities, legacy, and a future Africa can be proud of.
                 </p>
               </SectionReveal>
             </div>
@@ -265,7 +265,7 @@ const About = () => {
               </h2>
               <div className="w-12 h-[3px] bg-gold mt-6" />
               <p className="mt-8 text-base md:text-lg text-white/80 leading-relaxed">
-                At LANI, sustainability isn't a buzzword—it's embedded in how we build, operate, and grow. We are committed to creating long-term value by ensuring our business decisions positively impact people, the planet, and progress. Our approach blends environmental consciousness, economic resilience, and social responsibility across all subsidiaries.
+                At LANI, sustainability isn't a buzzword; it's embedded in how we build, operate, and grow. We are committed to creating long-term value by ensuring our business decisions positively impact people, the planet, and progress. Our approach blends environmental consciousness, economic resilience, and social responsibility across all subsidiaries.
               </p>
             </div>
           </SectionReveal>
@@ -369,7 +369,7 @@ const About = () => {
                 Leadership Team
               </h2>
               <p className="mt-4 text-text-muted max-w-3xl mx-auto text-sm leading-relaxed">
-                At the helm of LANI Group is a dynamic leadership team driven by purpose, excellence, and a bold vision for Africa. Led by our Group CEO, Mr. Ani, the team comprises seasoned professionals across diverse sectors—including finance, consulting, agriculture, hospitality, tech, and social impact. Together, they bring decades of experience, strategic foresight, and a shared passion for innovation and inclusive growth. Our leaders are not just decision-makers—they are changemakers committed to empowering people, transforming industries, and building a legacy of impact.
+                At the helm of LANI Group is a dynamic leadership team driven by purpose, excellence, and a bold vision for Africa. Led by our Group CEO, Mr. Ani, the team comprises seasoned professionals across diverse sectors, including finance, consulting, agriculture, hospitality, tech, and social impact. Together, they bring decades of experience, strategic foresight, and a shared passion for innovation and inclusive growth. Our leaders are not just decision-makers; they are changemakers committed to empowering people, transforming industries, and building a legacy of impact.
               </p>
             </div>
           </SectionReveal>
@@ -384,7 +384,7 @@ const About = () => {
                       <img
                         src={member.image}
                         alt={member.name}
-                        className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${member.objectPosition || 'object-center'}`}
+                        className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${member.objectPosition || 'object-top'}`}
                       />
                     ) : (
                       <div className="w-20 h-20 rounded-full bg-brand flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-500">
@@ -416,37 +416,39 @@ const About = () => {
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" onClick={() => setActiveBio(null)}>
           <div className="absolute inset-0 bg-text-primary/60 backdrop-blur-sm" />
           <div
-            className="relative max-w-lg w-full bg-white rounded-3xl p-8 md:p-10 shadow-premium-xl animate-fade-in"
+            className="relative max-w-lg w-full bg-white rounded-3xl p-6 md:p-10 shadow-premium-xl animate-fade-in max-h-[90vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setActiveBio(null)}
-              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-surface-200 hover:bg-surface-300 flex items-center justify-center text-text-muted hover:text-text-primary transition-all"
+              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-surface-200 hover:bg-surface-300 flex items-center justify-center text-text-muted hover:text-text-primary transition-all z-10"
             >
               <X size={18} />
             </button>
 
-            <div className="flex items-center gap-4 mb-6">
-              {leadershipTeam[activeBio].image ? (
-                <img
-                  src={leadershipTeam[activeBio].image}
-                  alt={leadershipTeam[activeBio].name}
-                  className="w-14 h-14 rounded-full object-cover"
-                />
-              ) : (
-                <div className="w-14 h-14 rounded-full bg-brand flex items-center justify-center text-white font-bold text-lg">
-                  {leadershipTeam[activeBio].initials}
+            <div className="overflow-y-auto pr-2 flex-1 scrollbar-thin">
+              <div className="flex items-center gap-4 mb-6 pr-8">
+                {leadershipTeam[activeBio].image ? (
+                  <img
+                    src={leadershipTeam[activeBio].image}
+                    alt={leadershipTeam[activeBio].name}
+                    className="w-14 h-14 rounded-full object-cover object-top"
+                  />
+                ) : (
+                  <div className="w-14 h-14 rounded-full bg-brand flex items-center justify-center text-white font-bold text-lg">
+                    {leadershipTeam[activeBio].initials}
+                  </div>
+                )}
+                <div>
+                  <h3 className="font-display text-xl font-bold text-text-primary">{leadershipTeam[activeBio].name}</h3>
+                  <p className="text-sm text-gold-dark font-medium">{leadershipTeam[activeBio].title}</p>
                 </div>
-              )}
-              <div>
-                <h3 className="font-display text-xl font-bold text-text-primary">{leadershipTeam[activeBio].name}</h3>
-                <p className="text-sm text-gold-dark font-medium">{leadershipTeam[activeBio].title}</p>
               </div>
+
+              <div className="h-px bg-surface-300 mb-6" />
+
+              <p className="text-text-secondary text-sm leading-relaxed whitespace-pre-line">{leadershipTeam[activeBio].bio}</p>
             </div>
-
-            <div className="h-px bg-surface-300 mb-6" />
-
-            <p className="text-text-secondary text-sm leading-relaxed whitespace-pre-line">{leadershipTeam[activeBio].bio}</p>
           </div>
         </div>
       )}
