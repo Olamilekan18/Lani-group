@@ -366,7 +366,7 @@ const Home = () => {
       </section>
 
       {/* ═══════════════ TRUSTED BY ═══════════════ */}
-      <section className="py-20 bg-subtle border-y border-surface-200">
+      <section className="py-20 bg-white border-y border-surface-200">
         <div className="max-w-7xl mx-auto px-6 mb-12">
           <SectionReveal>
             <div className="text-center">
@@ -384,20 +384,20 @@ const Home = () => {
         <SectionReveal animation="fade-up" delay={0.1}>
           <div className="relative w-full overflow-hidden py-4">
             {/* Fade gradient masks on left and right edges */}
-            <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#fafbff] to-transparent z-10 pointer-events-none" />
-            <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#fafbff] to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
             <div className="animate-marquee gap-16 md:gap-24 items-center">
               {/* First set of logos */}
               {partnerLogos.map((logo, i) => (
                 <div key={`logo-1-${i}`} className="h-20 md:h-24 flex items-center justify-center shrink-0">
-                  <img src={logo.src} alt={logo.alt} className="max-h-14 md:max-h-18 max-w-[200px] object-contain" />
+                  <img src={`${logo.src}?v=6`} alt={logo.alt} className="max-h-14 md:max-h-18 max-w-[200px] object-contain opacity-95 hover:opacity-100 transition-opacity duration-300" />
                 </div>
               ))}
               {/* Second duplicated set of logos for seamless infinite loop */}
               {partnerLogos.map((logo, i) => (
                 <div key={`logo-2-${i}`} className="h-20 md:h-24 flex items-center justify-center shrink-0">
-                  <img src={logo.src} alt={logo.alt} className="max-h-14 md:max-h-18 max-w-[200px] object-contain" />
+                  <img src={`${logo.src}?v=6`} alt={logo.alt} className="max-h-14 md:max-h-18 max-w-[200px] object-contain opacity-95 hover:opacity-100 transition-opacity duration-300" />
                 </div>
               ))}
             </div>
