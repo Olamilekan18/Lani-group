@@ -196,7 +196,7 @@ const ArticleDetail = () => {
                         </div>
                       )}
                       <div className="absolute bottom-3 left-3">
-                        <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/80 backdrop-blur-sm text-[10px] font-semibold text-brand">
+                        <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/80 backdrop-blur-sm text-[14px] font-semibold text-brand">
                           <Tag size={10} /> {art.category}
                         </span>
                       </div>

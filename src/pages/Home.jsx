@@ -166,7 +166,7 @@ const Home = () => {
           }}
         />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-28 pb-16 w-full">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-28 lg:pt-36 pb-16 w-full">
           <div className="max-w-3xl">
             <div className="hero-badge inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 border border-brand-100 mb-8" style={{opacity:0}}>
               <span className="w-2 h-2 rounded-full bg-brand animate-pulse" />
@@ -175,7 +175,7 @@ const Home = () => {
               </span>
             </div>
 
-            <h1 className="hero-title font-display text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-bold leading-[1.08] text-text-primary" style={{opacity:0}}>
+            <h1 className="hero-title font-display text-4xl sm:text-5xl md:text-6xl lg:text-[80px] font-bold leading-[1.08] text-text-primary" style={{opacity:0}}>
               Building Solutions That{' '}
               <span className="gradient-text-brand">Shape Lives</span> &{' '}
               <span className="gradient-text-brand">Inspire Growth</span>
@@ -231,7 +231,7 @@ const Home = () => {
                 <span className="text-xs font-bold text-brand uppercase tracking-[0.2em]">
                   Who We Are
                 </span>
-                <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-[44px] font-bold text-text-primary leading-tight">
+                <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-[52px] font-bold text-text-primary leading-tight">
                   A Dynamic African{' '}
                   <span className="gradient-text-brand">Enterprise Group</span>
                 </h2>
@@ -284,7 +284,7 @@ const Home = () => {
               <span className="text-xs font-bold text-brand uppercase tracking-[0.2em]">
                 What We Do
               </span>
-              <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-[44px] font-bold text-text-primary">
+              <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-[52px] font-bold text-text-primary">
                 Our Four Thematic Areas
               </h2>
               <p className="mt-4 text-text-muted max-w-2xl mx-auto">
@@ -324,7 +324,7 @@ const Home = () => {
               <span className="text-xs font-bold text-brand uppercase tracking-[0.2em]">
                 Our Portfolio
               </span>
-              <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-[44px] font-bold text-text-primary">
+              <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-[52px] font-bold text-text-primary">
                 Expression & Companies
               </h2>
               <p className="mt-4 text-text-muted max-w-2xl mx-auto">
@@ -341,7 +341,7 @@ const Home = () => {
                     {/* Top accent line */}
                     <div className="w-8 h-1 rounded-full bg-brand mb-5 group-hover:w-12 transition-all duration-300" />
 
-                    <p className="text-[11px] text-brand font-bold uppercase tracking-[0.15em] mb-2">
+                    <p className="text-[15px] text-brand font-bold uppercase tracking-[0.15em] mb-2">
                       {company.sector}
                     </p>
 
@@ -349,7 +349,7 @@ const Home = () => {
                       {company.name}
                     </h3>
 
-                    <p className="text-xs text-text-muted leading-relaxed flex-1">
+                    <p className="text-sm text-text-muted leading-relaxed flex-1">
                       {company.description}
                     </p>
 
@@ -415,7 +415,7 @@ const Home = () => {
         <div className="relative max-w-4xl mx-auto px-6 text-center">
           <SectionReveal animation="scale">
             <Quote size={40} className="mx-auto text-brand/15 mb-8" />
-            <blockquote className="font-display text-2xl md:text-3xl lg:text-[34px] font-medium text-text-primary leading-relaxed italic">
+            <blockquote className="font-display text-2xl md:text-3xl lg:text-[40px] font-medium text-text-primary leading-relaxed italic">
               "At LANI Group, we don't just build businesses — we build solutions that shape lives,
               inspire growth, and move Africa forward."
             </blockquote>
@@ -443,7 +443,7 @@ const Home = () => {
             <span className="text-xs font-bold text-brand uppercase tracking-[0.2em]">
               Get Started
             </span>
-            <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-[44px] font-bold text-text-primary">
+            <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-[52px] font-bold text-text-primary">
               Ready to Make an Impact?
             </h2>
             <p className="mt-6 text-text-muted max-w-xl mx-auto leading-relaxed">

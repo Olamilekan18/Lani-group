@@ -62,16 +62,16 @@ const Navbar = () => {
     <>
       <nav
         id="main-nav"
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 lg:h-24 lg:py-0 ${
           scrolled
-            ? 'bg-white/95 backdrop-blur-xl shadow-premium py-3'
+            ? 'bg-white/95 backdrop-blur-xl shadow-premium py-3 lg:h-20 lg:py-0'
             : 'bg-white py-4'
         }`}
       >
         {/* Top accent line */}
         <div className="absolute top-0 left-0 right-0 h-[3px] bg-brand" />
 
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between lg:h-full">
           {/* Logo */}
           <Link to="/" className="relative z-10 flex-shrink-0">
             <LaniLogo size="sm" />
@@ -85,7 +85,7 @@ const Navbar = () => {
                   <button
                     id="companies-dropdown-trigger"
                     onClick={() => setDropdownOpen(!dropdownOpen)}
-                    className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-[13px] font-medium transition-all duration-300 ${
+                    className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-[17px] font-medium transition-all duration-300 ${
                       dropdownOpen
                         ? 'text-brand bg-brand-50'
                         : 'text-text-secondary hover:text-brand hover:bg-brand-50'
@@ -108,7 +108,7 @@ const Navbar = () => {
                   >
                     <div className="bg-white rounded-2xl p-2 border border-surface-300 shadow-premium-xl">
                       <div className="px-4 pt-3 pb-2">
-                        <p className="text-[11px] font-bold text-brand uppercase tracking-[0.15em]">
+                        <p className="text-[15px] font-bold text-brand uppercase tracking-[0.15em]">
                           Our Companies
                         </p>
                       </div>
@@ -124,7 +124,7 @@ const Navbar = () => {
                             <p className="text-sm font-medium text-text-primary group-hover:text-brand transition-colors">
                               {company.name}
                             </p>
-                            <p className="text-[11px] text-text-muted mt-0.5">{company.desc}</p>
+                            <p className="text-[15px] text-text-muted mt-0.5">{company.desc}</p>
                           </div>
                           <ExternalLink
                             size={13}
@@ -139,7 +139,7 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`px-4 py-2 rounded-lg text-[13px] font-medium transition-all duration-300 ${
+                  className={`px-4 py-2 rounded-lg text-[17px] font-medium transition-all duration-300 ${
                     isActive(link.path)
                       ? 'text-brand bg-brand-50'
                       : 'text-text-secondary hover:text-brand hover:bg-brand-50'
@@ -200,7 +200,7 @@ const Navbar = () => {
                         >
                           <div>
                             <p className="text-sm font-medium">{company.name}</p>
-                            <p className="text-[11px] text-text-muted">{company.desc}</p>
+                            <p className="text-[15px] text-text-muted">{company.desc}</p>
                           </div>
                           <ExternalLink size={12} className="text-text-light" />
                         </a>

@@ -201,7 +201,7 @@ const Career = () => {
                             </div>
                           </div>
 
-                          <p className="text-[11px] text-white/40 italic text-center pt-2">
+                          <p className="text-[15px] text-white/40 italic text-center pt-2">
                             Shortlisted candidates will be contacted during the 4th quarter of the year for interviews.
                           </p>
                         </div>
@@ -290,7 +290,7 @@ const Career = () => {
                             </div>
                           </div>
 
-                          <p className="text-[11px] text-white/40 italic text-center pt-2">
+                          <p className="text-[15px] text-white/40 italic text-center pt-2">
                             Please note: Only qualified persons will be contacted.
                           </p>
                         </div>

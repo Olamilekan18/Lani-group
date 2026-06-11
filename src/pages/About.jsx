@@ -120,7 +120,7 @@ const About = () => {
       {/* ═══════════════ HERO ═══════════════ */}
       <section
         ref={heroRef}
-        className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-28 pb-20"
+        className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-28 lg:pt-36 pb-20"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80')`,
           backgroundSize: 'cover',
@@ -365,7 +365,7 @@ const About = () => {
               <span className="text-xs font-bold text-brand uppercase tracking-[0.2em]">
                 The People Behind Our Vision
               </span>
-              <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-[44px] font-bold text-text-primary">
+              <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-[52px] font-bold text-text-primary">
                 Leadership Team
               </h2>
               <p className="mt-4 text-text-muted max-w-3xl mx-auto text-sm leading-relaxed">
